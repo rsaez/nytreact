@@ -20,9 +20,14 @@ mongoose.Promise = global.Promise;
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/nytreact",
   {
-    useMongoClient: true
+    
   }
 );
+
+/** DB stuff */
+const db = require('./models')
+console.log(db.Article)
+/** DB stuff End */
 
 // Define API routes here
 
